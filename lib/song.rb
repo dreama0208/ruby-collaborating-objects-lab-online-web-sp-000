@@ -1,11 +1,11 @@
 class Song
 
-  attr_accessor :name, :artist
+  attr_accessor :title, :artist
 
   @@all = []
 
-  def initialize(name)
-    @name = name
+  def initialize(title)
+    @title = title
   end
 
   def self.all
@@ -13,7 +13,9 @@ class Song
   end
 
   def self.new_by_filename(filename)
-    song = self.
+    song = self.new
+    song.title = filename.split("-")[1]
+    song
   end
 
   def artist_name=(name)
