@@ -17,4 +17,8 @@ class Artist
     song.artist = self
   end
 
+  def songs
+    Song.each.select {|song| song.artist == self}
+  end
+
 end
