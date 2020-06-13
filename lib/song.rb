@@ -18,6 +18,7 @@ class Song
     song_name = filename.split("-")[1]
     song = song.new(song_name)
     song.artist_name = artist_name
+    song
   end
 
   def artist_name=(name)
